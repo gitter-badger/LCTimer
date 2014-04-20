@@ -22,6 +22,10 @@
 		6D45A886190364F1004ECED6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A862190364F1004ECED6 /* UIKit.framework */; };
 		6D45A88E190364F1004ECED6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D45A88C190364F1004ECED6 /* InfoPlist.strings */; };
 		6D45A890190364F1004ECED6 /* LCTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A88F190364F1004ECED6 /* LCTimerTests.m */; };
+		6D45A89D19037F8B004ECED6 /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A89C19037F8B004ECED6 /* NewRelicAgent.framework */; };
+		6D45A89F19037FC4004ECED6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A89E19037FC4004ECED6 /* CoreTelephony.framework */; };
+		6D45A8A119037FCC004ECED6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A8A019037FCC004ECED6 /* SystemConfiguration.framework */; };
+		6D45A8A319037FD5004ECED6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A8A219037FD5004ECED6 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		6D45A88B190364F1004ECED6 /* LCTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LCTimerTests-Info.plist"; sourceTree = "<group>"; };
 		6D45A88D190364F1004ECED6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6D45A88F190364F1004ECED6 /* LCTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCTimerTests.m; sourceTree = "<group>"; };
+		6D45A89C19037F8B004ECED6 /* NewRelicAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewRelicAgent.framework; sourceTree = "<group>"; };
+		6D45A89E19037FC4004ECED6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6D45A8A019037FCC004ECED6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6D45A8A219037FD5004ECED6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,9 +71,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D45A8A319037FD5004ECED6 /* libz.dylib in Frameworks */,
+				6D45A8A119037FCC004ECED6 /* SystemConfiguration.framework in Frameworks */,
+				6D45A89F19037FC4004ECED6 /* CoreTelephony.framework in Frameworks */,
 				6D45A861190364F1004ECED6 /* CoreGraphics.framework in Frameworks */,
 				6D45A863190364F1004ECED6 /* UIKit.framework in Frameworks */,
 				6D45A85F190364F1004ECED6 /* Foundation.framework in Frameworks */,
+				6D45A89D19037F8B004ECED6 /* NewRelicAgent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +116,10 @@
 		6D45A85D190364F1004ECED6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6D45A8A219037FD5004ECED6 /* libz.dylib */,
+				6D45A8A019037FCC004ECED6 /* SystemConfiguration.framework */,
+				6D45A89E19037FC4004ECED6 /* CoreTelephony.framework */,
+				6D45A89C19037F8B004ECED6 /* NewRelicAgent.framework */,
 				6D45A85E190364F1004ECED6 /* Foundation.framework */,
 				6D45A860190364F1004ECED6 /* CoreGraphics.framework */,
 				6D45A862190364F1004ECED6 /* UIKit.framework */,
@@ -384,6 +400,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LCTimer/LCTimer-Prefix.pch";
 				INFOPLIST_FILE = "LCTimer/LCTimer-Info.plist";
@@ -399,6 +419,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LCTimer/LCTimer-Prefix.pch";
 				INFOPLIST_FILE = "LCTimer/LCTimer-Info.plist";
