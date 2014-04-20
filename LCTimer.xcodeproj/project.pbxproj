@@ -14,7 +14,6 @@
 		6D45A86B190364F1004ECED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A86A190364F1004ECED6 /* main.m */; };
 		6D45A86F190364F1004ECED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A86E190364F1004ECED6 /* AppDelegate.m */; };
 		6D45A872190364F1004ECED6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D45A870190364F1004ECED6 /* Main_iPhone.storyboard */; };
-		6D45A875190364F1004ECED6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D45A873190364F1004ECED6 /* Main_iPad.storyboard */; };
 		6D45A878190364F1004ECED6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A877190364F1004ECED6 /* MainViewController.m */; };
 		6D45A87B190364F1004ECED6 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A87A190364F1004ECED6 /* FlipsideViewController.m */; };
 		6D45A87D190364F1004ECED6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D45A87C190364F1004ECED6 /* Images.xcassets */; };
@@ -47,7 +46,6 @@
 		6D45A86D190364F1004ECED6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6D45A86E190364F1004ECED6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6D45A871190364F1004ECED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		6D45A874190364F1004ECED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		6D45A876190364F1004ECED6 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		6D45A877190364F1004ECED6 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		6D45A879190364F1004ECED6 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 				6D45A86D190364F1004ECED6 /* AppDelegate.h */,
 				6D45A86E190364F1004ECED6 /* AppDelegate.m */,
 				6D45A870190364F1004ECED6 /* Main_iPhone.storyboard */,
-				6D45A873190364F1004ECED6 /* Main_iPad.storyboard */,
 				6D45A876190364F1004ECED6 /* MainViewController.h */,
 				6D45A877190364F1004ECED6 /* MainViewController.m */,
 				6D45A879190364F1004ECED6 /* FlipsideViewController.h */,
@@ -236,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D45A875190364F1004ECED6 /* Main_iPad.storyboard in Resources */,
 				6D45A87D190364F1004ECED6 /* Images.xcassets in Resources */,
 				6D45A872190364F1004ECED6 /* Main_iPhone.storyboard in Resources */,
 				6D45A869190364F1004ECED6 /* InfoPlist.strings in Resources */,
@@ -298,14 +294,6 @@
 				6D45A871190364F1004ECED6 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		6D45A873190364F1004ECED6 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6D45A874190364F1004ECED6 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		6D45A88C190364F1004ECED6 /* InfoPlist.strings */ = {
@@ -399,7 +387,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LCTimer/LCTimer-Prefix.pch";
 				INFOPLIST_FILE = "LCTimer/LCTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -412,7 +402,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LCTimer/LCTimer-Prefix.pch";
 				INFOPLIST_FILE = "LCTimer/LCTimer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
