@@ -37,15 +37,20 @@
 
 -(void) setTimerFor:(NSInteger)Seconds {
     NSTimeInterval ti = 1.0;
+
+    if ([self.myTimer isValid]) {
+        [NewRelic recordMetricWithName:@"Reset" category:@"Timer" value:[NSNumber numberWithInteger:Seconds]];
+    } else {
+        [NewRelic recordMetricWithName:@"Set" category:@"Timer" value:[NSNumber numberWithInteger:Seconds]];
+    }
     
     if (self.myTimer) {
         [self.myTimer invalidate];
         self.myTimer = nil;
-        [self timerLog:@"Invalidated timer"];
     }
+    
     self.view.backgroundColor = [UIColor greenColor];
 
-    [self timerLog: @"Starting timer for %li sec", Seconds];
     self.myTimer = [NSTimer scheduledTimerWithTimeInterval:Seconds
                                      target:self
                                    selector:@selector(timesUp)
@@ -56,21 +61,6 @@
 
 - (void) timesUp {
     self.view.backgroundColor = [UIColor redColor];
-}
-
--(void)timerLog:(NSString*)status, ...
-{
-    NSDateFormatter *ISO8601 = [[NSDateFormatter alloc] init];
-    [ISO8601 setDateStyle:NSDateFormatterLongStyle];
-    [ISO8601 setTimeStyle:NSDateFormatterShortStyle];
-    NSString *now = [ISO8601 stringFromDate:[NSDate date]];
-    va_list args;
-    va_start(args, status);
-    NSString *message = [now stringByAppendingString:[[NSString alloc] initWithFormat:status arguments:args]];
-
-    //NSLogv(status, args);
-    va_end(args);
- 
 }
 
 #pragma mark - Flipside View Controller
