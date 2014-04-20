@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D45A85F190364F1004ECED6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A85E190364F1004ECED6 /* Foundation.framework */; };
+		6D45A861190364F1004ECED6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A860190364F1004ECED6 /* CoreGraphics.framework */; };
+		6D45A863190364F1004ECED6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A862190364F1004ECED6 /* UIKit.framework */; };
+		6D45A869190364F1004ECED6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D45A867190364F1004ECED6 /* InfoPlist.strings */; };
+		6D45A86B190364F1004ECED6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A86A190364F1004ECED6 /* main.m */; };
+		6D45A86F190364F1004ECED6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A86E190364F1004ECED6 /* AppDelegate.m */; };
+		6D45A872190364F1004ECED6 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D45A870190364F1004ECED6 /* Main_iPhone.storyboard */; };
+		6D45A875190364F1004ECED6 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D45A873190364F1004ECED6 /* Main_iPad.storyboard */; };
+		6D45A878190364F1004ECED6 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A877190364F1004ECED6 /* MainViewController.m */; };
+		6D45A87B190364F1004ECED6 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A87A190364F1004ECED6 /* FlipsideViewController.m */; };
+		6D45A87D190364F1004ECED6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D45A87C190364F1004ECED6 /* Images.xcassets */; };
+		6D45A884190364F1004ECED6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A883190364F1004ECED6 /* XCTest.framework */; };
+		6D45A885190364F1004ECED6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A85E190364F1004ECED6 /* Foundation.framework */; };
+		6D45A886190364F1004ECED6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A862190364F1004ECED6 /* UIKit.framework */; };
+		6D45A88E190364F1004ECED6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D45A88C190364F1004ECED6 /* InfoPlist.strings */; };
+		6D45A890190364F1004ECED6 /* LCTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D45A88F190364F1004ECED6 /* LCTimerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6D45A887190364F1004ECED6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6D45A853190364F1004ECED6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D45A85A190364F1004ECED6;
+			remoteInfo = LCTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6D45A85B190364F1004ECED6 /* LCTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D45A85E190364F1004ECED6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6D45A860190364F1004ECED6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6D45A862190364F1004ECED6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6D45A866190364F1004ECED6 /* LCTimer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LCTimer-Info.plist"; sourceTree = "<group>"; };
+		6D45A868190364F1004ECED6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D45A86A190364F1004ECED6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6D45A86C190364F1004ECED6 /* LCTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LCTimer-Prefix.pch"; sourceTree = "<group>"; };
+		6D45A86D190364F1004ECED6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6D45A86E190364F1004ECED6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6D45A871190364F1004ECED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		6D45A874190364F1004ECED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		6D45A876190364F1004ECED6 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6D45A877190364F1004ECED6 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6D45A879190364F1004ECED6 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		6D45A87A190364F1004ECED6 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		6D45A87C190364F1004ECED6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6D45A882190364F1004ECED6 /* LCTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D45A883190364F1004ECED6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6D45A88B190364F1004ECED6 /* LCTimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LCTimerTests-Info.plist"; sourceTree = "<group>"; };
+		6D45A88D190364F1004ECED6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6D45A88F190364F1004ECED6 /* LCTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCTimerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6D45A858190364F1004ECED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D45A861190364F1004ECED6 /* CoreGraphics.framework in Frameworks */,
+				6D45A863190364F1004ECED6 /* UIKit.framework in Frameworks */,
+				6D45A85F190364F1004ECED6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D45A87F190364F1004ECED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D45A884190364F1004ECED6 /* XCTest.framework in Frameworks */,
+				6D45A886190364F1004ECED6 /* UIKit.framework in Frameworks */,
+				6D45A885190364F1004ECED6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6D45A852190364F1004ECED6 = {
+			isa = PBXGroup;
+			children = (
+				6D45A864190364F1004ECED6 /* LCTimer */,
+				6D45A889190364F1004ECED6 /* LCTimerTests */,
+				6D45A85D190364F1004ECED6 /* Frameworks */,
+				6D45A85C190364F1004ECED6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6D45A85C190364F1004ECED6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6D45A85B190364F1004ECED6 /* LCTimer.app */,
+				6D45A882190364F1004ECED6 /* LCTimerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6D45A85D190364F1004ECED6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D45A85E190364F1004ECED6 /* Foundation.framework */,
+				6D45A860190364F1004ECED6 /* CoreGraphics.framework */,
+				6D45A862190364F1004ECED6 /* UIKit.framework */,
+				6D45A883190364F1004ECED6 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D45A864190364F1004ECED6 /* LCTimer */ = {
+			isa = PBXGroup;
+			children = (
+				6D45A86D190364F1004ECED6 /* AppDelegate.h */,
+				6D45A86E190364F1004ECED6 /* AppDelegate.m */,
+				6D45A870190364F1004ECED6 /* Main_iPhone.storyboard */,
+				6D45A873190364F1004ECED6 /* Main_iPad.storyboard */,
+				6D45A876190364F1004ECED6 /* MainViewController.h */,
+				6D45A877190364F1004ECED6 /* MainViewController.m */,
+				6D45A879190364F1004ECED6 /* FlipsideViewController.h */,
+				6D45A87A190364F1004ECED6 /* FlipsideViewController.m */,
+				6D45A87C190364F1004ECED6 /* Images.xcassets */,
+				6D45A865190364F1004ECED6 /* Supporting Files */,
+			);
+			path = LCTimer;
+			sourceTree = "<group>";
+		};
+		6D45A865190364F1004ECED6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D45A866190364F1004ECED6 /* LCTimer-Info.plist */,
+				6D45A867190364F1004ECED6 /* InfoPlist.strings */,
+				6D45A86A190364F1004ECED6 /* main.m */,
+				6D45A86C190364F1004ECED6 /* LCTimer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6D45A889190364F1004ECED6 /* LCTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				6D45A88F190364F1004ECED6 /* LCTimerTests.m */,
+				6D45A88A190364F1004ECED6 /* Supporting Files */,
+			);
+			path = LCTimerTests;
+			sourceTree = "<group>";
+		};
+		6D45A88A190364F1004ECED6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D45A88B190364F1004ECED6 /* LCTimerTests-Info.plist */,
+				6D45A88C190364F1004ECED6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6D45A85A190364F1004ECED6 /* LCTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D45A893190364F1004ECED6 /* Build configuration list for PBXNativeTarget "LCTimer" */;
+			buildPhases = (
+				6D45A857190364F1004ECED6 /* Sources */,
+				6D45A858190364F1004ECED6 /* Frameworks */,
+				6D45A859190364F1004ECED6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LCTimer;
+			productName = LCTimer;
+			productReference = 6D45A85B190364F1004ECED6 /* LCTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6D45A881190364F1004ECED6 /* LCTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D45A896190364F1004ECED6 /* Build configuration list for PBXNativeTarget "LCTimerTests" */;
+			buildPhases = (
+				6D45A87E190364F1004ECED6 /* Sources */,
+				6D45A87F190364F1004ECED6 /* Frameworks */,
+				6D45A880190364F1004ECED6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D45A888190364F1004ECED6 /* PBXTargetDependency */,
+			);
+			name = LCTimerTests;
+			productName = LCTimerTests;
+			productReference = 6D45A882190364F1004ECED6 /* LCTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6D45A853190364F1004ECED6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Eric Betts";
+				TargetAttributes = {
+					6D45A881190364F1004ECED6 = {
+						TestTargetID = 6D45A85A190364F1004ECED6;
+					};
+				};
+			};
+			buildConfigurationList = 6D45A856190364F1004ECED6 /* Build configuration list for PBXProject "LCTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6D45A852190364F1004ECED6;
+			productRefGroup = 6D45A85C190364F1004ECED6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D45A85A190364F1004ECED6 /* LCTimer */,
+				6D45A881190364F1004ECED6 /* LCTimerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6D45A859190364F1004ECED6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D45A875190364F1004ECED6 /* Main_iPad.storyboard in Resources */,
+				6D45A87D190364F1004ECED6 /* Images.xcassets in Resources */,
+				6D45A872190364F1004ECED6 /* Main_iPhone.storyboard in Resources */,
+				6D45A869190364F1004ECED6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D45A880190364F1004ECED6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D45A88E190364F1004ECED6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D45A857190364F1004ECED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D45A86F190364F1004ECED6 /* AppDelegate.m in Sources */,
+				6D45A878190364F1004ECED6 /* MainViewController.m in Sources */,
+				6D45A87B190364F1004ECED6 /* FlipsideViewController.m in Sources */,
+				6D45A86B190364F1004ECED6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D45A87E190364F1004ECED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D45A890190364F1004ECED6 /* LCTimerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6D45A888190364F1004ECED6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D45A85A190364F1004ECED6 /* LCTimer */;
+			targetProxy = 6D45A887190364F1004ECED6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6D45A867190364F1004ECED6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D45A868190364F1004ECED6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6D45A870190364F1004ECED6 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D45A871190364F1004ECED6 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		6D45A873190364F1004ECED6 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D45A874190364F1004ECED6 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		6D45A88C190364F1004ECED6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D45A88D190364F1004ECED6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6D45A891190364F1004ECED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6D45A892190364F1004ECED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6D45A894190364F1004ECED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LCTimer/LCTimer-Prefix.pch";
+				INFOPLIST_FILE = "LCTimer/LCTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6D45A895190364F1004ECED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LCTimer/LCTimer-Prefix.pch";
+				INFOPLIST_FILE = "LCTimer/LCTimer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6D45A897190364F1004ECED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LCTimer.app/LCTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LCTimer/LCTimer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LCTimerTests/LCTimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6D45A898190364F1004ECED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LCTimer.app/LCTimer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LCTimer/LCTimer-Prefix.pch";
+				INFOPLIST_FILE = "LCTimerTests/LCTimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6D45A856190364F1004ECED6 /* Build configuration list for PBXProject "LCTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D45A891190364F1004ECED6 /* Debug */,
+				6D45A892190364F1004ECED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6D45A893190364F1004ECED6 /* Build configuration list for PBXNativeTarget "LCTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D45A894190364F1004ECED6 /* Debug */,
+				6D45A895190364F1004ECED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6D45A896190364F1004ECED6 /* Build configuration list for PBXNativeTarget "LCTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D45A897190364F1004ECED6 /* Debug */,
+				6D45A898190364F1004ECED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6D45A853190364F1004ECED6 /* Project object */;
+}
