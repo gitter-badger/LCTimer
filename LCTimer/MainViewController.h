@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 
+@property NSTimer *myTimer;
+
 @end
