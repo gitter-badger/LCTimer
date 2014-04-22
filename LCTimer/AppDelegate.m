@@ -13,6 +13,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [NewRelicAgent startWithApplicationToken:@"AA76096c232c1871aee8ce4fa9b4e6b518beffd0a1"];
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     // Override point for customization after application launch.
     return YES;
 }
