@@ -7,11 +7,16 @@
 //
 
 #import "FlipsideViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
+
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
 @property (strong, nonatomic) UIPopoverController *flipsidePopoverController;
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *active;
+
 @property NSTimer *myTimer;
+@property NSTimer *sinoatrial;
 
 @end
