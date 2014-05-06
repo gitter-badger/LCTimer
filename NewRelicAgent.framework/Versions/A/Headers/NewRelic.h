@@ -21,7 +21,7 @@
 #import "NRTimer.h"
 #import "NRLogger.h"
 #import "NRGCDOverride.h"
-
+#import "NewRelicFeatureFlags.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,6 +34,19 @@ extern "C" {
 /**************************************/
 
 
+/*!
+ Set this bit-wise flag to enable/disable  features.
+
+ @param NRMAFeatureFlag the NR_OPTIONS bitwise-flag 
+ 
+ Note these flags must be set before calling -startWithApplicationToken:
+      See NewRelicFeatureFlags.h for more flag details.
+
+*/
+
++ (void) enableFeatures:(NRMAFeatureFlags)featureFlags;
+
++ (void) disableFeatures:(NRMAFeatureFlags)featureFlags;
 /*!
  Sets the version of the application reported to New Relic.
 

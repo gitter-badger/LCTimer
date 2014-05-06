@@ -36,6 +36,7 @@ typedef NSString NRMetricUnit;
 #define kNRmetricUnitsOperations        (NRMetricUnit*)@"op"
 
 #define kNRSupportabilityPrefix          @"Supportability/MobileAgent"
+#define kNRAgentHealthPrefix             @"Supportability/AgentHealth"
 
 #define kNRCarrierNameCacheLifetime     50 // milliseconds
 
