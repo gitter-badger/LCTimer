@@ -409,7 +409,7 @@
 				INFOPLIST_FILE = "LCTimer/LCTimer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -428,7 +428,7 @@
 				INFOPLIST_FILE = "LCTimer/LCTimer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -492,6 +492,7 @@
 				6D45A895190364F1004ECED6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6D45A896190364F1004ECED6 /* Build configuration list for PBXNativeTarget "LCTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +501,7 @@
 				6D45A898190364F1004ECED6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
