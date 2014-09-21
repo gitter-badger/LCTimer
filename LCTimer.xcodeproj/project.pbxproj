@@ -26,6 +26,8 @@
 		6D45A89F19037FC4004ECED6 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A89E19037FC4004ECED6 /* CoreTelephony.framework */; };
 		6D45A8A119037FCC004ECED6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A8A019037FCC004ECED6 /* SystemConfiguration.framework */; };
 		6D45A8A319037FD5004ECED6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A8A219037FD5004ECED6 /* libz.dylib */; };
+		6DD8D91719CEA01E0000CF5B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD8D91519CEA01E0000CF5B /* Icon@2x.png */; };
+		6DD8D91819CEA01E0000CF5B /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD8D91619CEA01E0000CF5B /* iTunesArtwork@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		6D45A89E19037FC4004ECED6 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		6D45A8A019037FCC004ECED6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6D45A8A219037FD5004ECED6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6DD8D91519CEA01E0000CF5B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		6DD8D91619CEA01E0000CF5B /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 		6D45A865190364F1004ECED6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6DD8D91519CEA01E0000CF5B /* Icon@2x.png */,
+				6DD8D91619CEA01E0000CF5B /* iTunesArtwork@2x.png */,
 				6D45A866190364F1004ECED6 /* LCTimer-Info.plist */,
 				6D45A867190364F1004ECED6 /* InfoPlist.strings */,
 				6D45A86A190364F1004ECED6 /* main.m */,
@@ -250,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D45A87D190364F1004ECED6 /* Images.xcassets in Resources */,
+				6DD8D91819CEA01E0000CF5B /* iTunesArtwork@2x.png in Resources */,
+				6DD8D91719CEA01E0000CF5B /* Icon@2x.png in Resources */,
 				6D45A872190364F1004ECED6 /* Main_iPhone.storyboard in Resources */,
 				6D45A869190364F1004ECED6 /* InfoPlist.strings in Resources */,
 			);
