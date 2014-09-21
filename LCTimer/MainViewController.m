@@ -19,7 +19,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
     [self defibrillate];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.remaining = 0;
+    self.total = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,42 +30,34 @@
 }
 
 - (IBAction)newTopic:(id)sender {
-    [self setTimerFor:5*60];
+    [self setTimerFor:5*MINUTE];
 }
 
 - (IBAction)continueTopic:(id)sender {
-    [self setTimerFor:2*60];
+    [self setTimerFor:2*MINUTE];
 }
 
 -(void) setTimerFor:(NSInteger)Seconds {
-    NSTimeInterval ti = 1.0;
+    self.total = Seconds;
 
-    if ([self.myTimer isValid]) {
+    if (self.remaining > 0) {
         [NewRelic recordMetricWithName:@"Reset" category:@"Timer" value:[NSNumber numberWithInteger:Seconds]];
     } else {
         [NewRelic recordMetricWithName:@"Set" category:@"Timer" value:[NSNumber numberWithInteger:Seconds]];
     }
     
-    if (self.myTimer) {
-        [self.myTimer invalidate];
-        self.myTimer = nil;
-    }
-    
+    self.remaining = Seconds;
     self.view.backgroundColor = [UIColor greenColor];
-
-    self.myTimer = [NSTimer scheduledTimerWithTimeInterval:Seconds
-                                     target:self
-                                   selector:@selector(timesUp)
-                                   userInfo:nil
-                                    repeats:NO];
-    self.myTimer.tolerance = ti;
     [self.sinoatrial fire];
+    [self.active startAnimating];
 }
 
 - (void) timesUp {
     AudioServicesPlaySystemSound(1006);
     [self flashScreen];
     self.view.backgroundColor = [UIColor redColor];
+    [self.active stopAnimating];
+    self.total = 0;
 }
 
 - (void) flashScreen {
@@ -77,20 +70,28 @@
 	[UIView commitAnimations];
 }
 
-- (void) heartbeat {
-    if (self.myTimer && [self.myTimer isValid]) {
-        [self.active startAnimating];
+- (void) heartbeat:(NSTimer *)timer {
+    //A timer has been set
+    if (self.total > 0) {
+        self.progress.progress = 1 - (self.remaining / (float)self.total);
+        if (self.remaining > 0) {//hasn't expired
+            self.remaining = self.remaining - 1;
+        } else {
+            [self timesUp];
+            [timer invalidate];
+        }
+        NSLog(@"[Heartbeat] %li of %li (%f)", (long)self.remaining, (long)self.total, self.progress.progress);
     } else {
-        [self.active stopAnimating];
+        self.progress.progress = 0.0;
     }
 }
 
 - (void) defibrillate {
-    NSTimeInterval ti = 1.0;
+    NSTimeInterval ti = 0.1;
     if (!self.sinoatrial) {
-        self.sinoatrial = [NSTimer scheduledTimerWithTimeInterval:3.0
+        self.sinoatrial = [NSTimer scheduledTimerWithTimeInterval:1.0
                                                           target:self
-                                                        selector:@selector(heartbeat)
+                                                         selector:@selector(heartbeat:)
                                                         userInfo:nil
                                                          repeats:YES];
         self.sinoatrial.tolerance = ti;

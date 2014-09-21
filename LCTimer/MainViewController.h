@@ -8,7 +8,7 @@
 
 #import "FlipsideViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
-
+#define MINUTE 60
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate, UIPopoverControllerDelegate>
 
@@ -16,7 +16,12 @@
 
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *active;
 
-@property NSTimer *myTimer;
+@property (strong, nonatomic) IBOutlet UIProgressView *progress;
+
+@property (strong, nonatomic) IBOutlet UILabel *currentTime;
+
+@property NSInteger remaining;
+@property NSInteger total;
 @property NSTimer *sinoatrial;
 
 @end
