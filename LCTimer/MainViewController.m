@@ -81,7 +81,7 @@
             [self timesUp];
             [timer invalidate];
         }
-        NSLog(@"[Heartbeat] %li of %li (%f)", (long)self.remaining, (long)self.total, self.progress.progress);
+        //NSLog(@"[Heartbeat] %li of %li (%f)", (long)self.remaining, (long)self.total, self.progress.progress);
     } else {
         self.progress.progress = 0.0;
     }
