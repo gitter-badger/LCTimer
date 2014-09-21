@@ -18,6 +18,7 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor yellowColor];
+    [self updateTimeLabel];
     [self defibrillate];
     self.remaining = 0;
     self.total = 0;
@@ -84,9 +85,10 @@
     } else {
         self.progress.progress = 0.0;
     }
+    [self updateTimeLabel];
 }
 
-- (void) defibrillate {
+- (void) defibrillate { //Start heartbeat
     NSTimeInterval ti = 0.1;
     if (!self.sinoatrial) {
         self.sinoatrial = [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -96,6 +98,16 @@
                                                          repeats:YES];
         self.sinoatrial.tolerance = ti;
     }
+}
+
+- (void) updateTimeLabel {
+    NSDate* now = [NSDate date];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComponents = [gregorian components:(NSHourCalendarUnit  | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:now];
+    NSInteger hour = [dateComponents hour];
+    NSInteger minute = [dateComponents minute];
+    //NSInteger second = [dateComponents second];
+    self.currentTime.text = [NSString stringWithFormat:@"%02li:%02li", hour, minute];
 }
 
 #pragma mark - Flipside View Controller
