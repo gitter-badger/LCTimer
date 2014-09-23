@@ -27,7 +27,7 @@
 		6D45A8A119037FCC004ECED6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A8A019037FCC004ECED6 /* SystemConfiguration.framework */; };
 		6D45A8A319037FD5004ECED6 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D45A8A219037FD5004ECED6 /* libz.dylib */; };
 		6DD8D91719CEA01E0000CF5B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD8D91519CEA01E0000CF5B /* Icon@2x.png */; };
-		6DD8D91819CEA01E0000CF5B /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DD8D91619CEA01E0000CF5B /* iTunesArtwork@2x.png */; };
+		6DD8D91819CEA01E0000CF5B /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 6DD8D91619CEA01E0000CF5B /* iTunesArtwork@2x */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 		6D45A8A019037FCC004ECED6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6D45A8A219037FD5004ECED6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		6DD8D91519CEA01E0000CF5B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		6DD8D91619CEA01E0000CF5B /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		6DD8D91619CEA01E0000CF5B /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				6DD8D91519CEA01E0000CF5B /* Icon@2x.png */,
-				6DD8D91619CEA01E0000CF5B /* iTunesArtwork@2x.png */,
+				6DD8D91619CEA01E0000CF5B /* iTunesArtwork@2x */,
 				6D45A866190364F1004ECED6 /* LCTimer-Info.plist */,
 				6D45A867190364F1004ECED6 /* InfoPlist.strings */,
 				6D45A86A190364F1004ECED6 /* main.m */,
@@ -256,7 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D45A87D190364F1004ECED6 /* Images.xcassets in Resources */,
-				6DD8D91819CEA01E0000CF5B /* iTunesArtwork@2x.png in Resources */,
+				6DD8D91819CEA01E0000CF5B /* iTunesArtwork@2x in Resources */,
 				6DD8D91719CEA01E0000CF5B /* Icon@2x.png in Resources */,
 				6D45A872190364F1004ECED6 /* Main_iPhone.storyboard in Resources */,
 				6D45A869190364F1004ECED6 /* InfoPlist.strings in Resources */,
