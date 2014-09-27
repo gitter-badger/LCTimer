@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A329r" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rQl-PL-IFJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A361p" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rQl-PL-IFJ">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -31,8 +32,8 @@
                                     <segue destination="kIf-nA-PKG" kind="modal" identifier="showAlternate" modalTransitionStyle="flipHorizontal" id="ZEO-Qe-X3j"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvC-kd-4tp">
-                                <rect key="frame" x="103" y="68" width="115" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvC-kd-4tp">
+                                <rect key="frame" x="112" y="120" width="97" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="New Topic">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -42,8 +43,26 @@
                                     <action selector="newTopic:" destination="rQl-PL-IFJ" eventType="touchUpInside" id="NiZ-QJ-zJ4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOF-yZ-cJy">
-                                <rect key="frame" x="71" y="348" width="178" height="146"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-GJ-9kv" userLabel="Spinner">
+                                <rect key="frame" x="267" y="276" width="37" height="37"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-Oi-Xpn">
+                                <rect key="frame" x="16" y="536" width="288" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eao-iU-OY1" userLabel="Current Time">
+                                <rect key="frame" x="103" y="284" width="115" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Zty-8J-oTw"/>
+                                    <constraint firstAttribute="width" constant="115" id="wUJ-tR-GOb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOF-yZ-cJy">
+                                <rect key="frame" x="91" y="456" width="138" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Continue Topic">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -53,25 +72,22 @@
                                     <action selector="continueTopic:" destination="rQl-PL-IFJ" eventType="touchUpInside" id="oAo-bZ-1MD"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mw7-GJ-9kv">
-                                <rect key="frame" x="267" y="276" width="37" height="37"/>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <color key="color" cocoaTouchSystemColor="darkTextColor"/>
-                            </activityIndicatorView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-Oi-Xpn">
-                                <rect key="frame" x="16" y="536" width="288" height="2"/>
-                            </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eao-iU-OY1">
-                                <rect key="frame" x="103" y="284" width="115" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="jqg-sy-dxO" secondAttribute="trailing" constant="20" symbolic="YES" id="1ym-A3-aKq"/>
+                            <constraint firstItem="jvC-kd-4tp" firstAttribute="centerX" secondItem="l9E-07-oys" secondAttribute="centerX" id="EHx-C9-ibw"/>
+                            <constraint firstItem="1g6-Oi-Xpn" firstAttribute="top" secondItem="eOF-yZ-cJy" secondAttribute="bottom" constant="42" id="Fh0-gN-f8L"/>
+                            <constraint firstItem="eOF-yZ-cJy" firstAttribute="centerX" secondItem="jvC-kd-4tp" secondAttribute="centerX" constant="-0.5" id="JiF-Xg-vNC"/>
+                            <constraint firstItem="1g6-Oi-Xpn" firstAttribute="leading" secondItem="l9E-07-oys" secondAttribute="leadingMargin" id="TMo-ly-BCL"/>
                             <constraint firstAttribute="bottom" secondItem="jqg-sy-dxO" secondAttribute="bottom" constant="20" symbolic="YES" id="Uf2-YL-3zF"/>
+                            <constraint firstAttribute="centerY" secondItem="eao-iU-OY1" secondAttribute="centerY" constant="-10.5" id="bTX-B4-kWa"/>
+                            <constraint firstItem="jvC-kd-4tp" firstAttribute="top" secondItem="bfD-tQ-IfD" secondAttribute="bottom" constant="100" id="dSh-4m-f2X"/>
+                            <constraint firstAttribute="centerY" secondItem="mw7-GJ-9kv" secondAttribute="centerY" constant="-10.5" id="kdn-NF-8VG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1g6-Oi-Xpn" secondAttribute="trailing" id="lt8-Uw-xkl"/>
+                            <constraint firstItem="mw7-GJ-9kv" firstAttribute="trailing" secondItem="l9E-07-oys" secondAttribute="trailingMargin" id="oYQ-Lo-szq"/>
+                            <constraint firstAttribute="centerX" secondItem="eao-iU-OY1" secondAttribute="centerX" constant="-0.5" id="pi7-g3-Sso"/>
+                            <constraint firstItem="1g6-Oi-Xpn" firstAttribute="centerY" secondItem="jqg-sy-dxO" secondAttribute="centerY" id="tgD-6J-keJ"/>
                         </constraints>
                     </view>
                     <connections>
