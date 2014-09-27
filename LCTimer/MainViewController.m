@@ -71,7 +71,7 @@
 	[UIView commitAnimations];
 }
 
-- (void) heartbeat:(NSTimer *)timer {
+- (void) heartbeat:(NSTimer *)_ {
     //A timer has been set
     if (self.total > 0) {
         self.progress.progress = 1 - (self.remaining / (float)self.total);
@@ -79,7 +79,6 @@
             self.remaining = self.remaining - 1;
         } else {
             [self timesUp];
-            [timer invalidate];
         }
         NSLog(@"[Heartbeat] %li of %li (%f)", (long)self.remaining, (long)self.total, self.progress.progress);
     } else {
@@ -89,23 +88,15 @@
 }
 
 - (void) defibrillate { //Start heartbeat
-    NSTimeInterval ti = 0.1;
     if (!self.sinoatrial) {
-        self.sinoatrial = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                          target:self
-                                                         selector:@selector(heartbeat:)
-                                                        userInfo:nil
-                                                         repeats:YES];
-        self.sinoatrial.tolerance = ti;
+        self.sinoatrial = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(heartbeat:) userInfo:nil repeats:YES];
     }
 }
 
 - (void) updateTimeLabel {
-    
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"hh:mm a"];
     NSDate *now = [[NSDate alloc] init];
-    
     self.currentTime.text = [format stringFromDate:now];
 }
 
