@@ -81,7 +81,7 @@
             [self timesUp];
             [timer invalidate];
         }
-        //NSLog(@"[Heartbeat] %li of %li (%f)", (long)self.remaining, (long)self.total, self.progress.progress);
+        NSLog(@"[Heartbeat] %li of %li (%f)", (long)self.remaining, (long)self.total, self.progress.progress);
     } else {
         self.progress.progress = 0.0;
     }
@@ -101,13 +101,12 @@
 }
 
 - (void) updateTimeLabel {
-    NSDate* now = [NSDate date];
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *dateComponents = [gregorian components:(NSHourCalendarUnit  | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:now];
-    NSInteger hour = [dateComponents hour];
-    NSInteger minute = [dateComponents minute];
-    //NSInteger second = [dateComponents second];
-    self.currentTime.text = [NSString stringWithFormat:@"%02li:%02li", hour, minute];
+    
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"hh:mm a"];
+    NSDate *now = [[NSDate alloc] init];
+    
+    self.currentTime.text = [format stringFromDate:now];
 }
 
 #pragma mark - Flipside View Controller
